@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Bethak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fce895; /* A warm, food-themed background */
+        }
+        .text-foodie-orange {
+            color: #ff914d;
+        }
+        .bg-foodie-red {
+            background-color: #d1262d;
+        }
+        .btn {
+            @apply px-6 py-3 font-semibold rounded-full shadow-lg transition transform duration-300 hover:scale-105;
+        }
+        /* Custom hover effect for menu cards */
+        .menu-card {
+            transition: transform 0.8s ease-in-out;
+        }
+        .menu-card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Mobile-first approach with vw and vh units */
+        .hero-title {
+            font-size: 10vw;
+        }
+        .hero-subtitle {
+            font-size: 5vw;
+        }
+        .section-title {
+            font-size: 8vw;
+        }
+        .menu-item-title {
+            font-size: 5vw;
+        }
+        .menu-item-price {
+            font-size: 5vw;
+        }
+        .whatsapp-btn {
+            padding: 4vw 8vw;
+        }
+
+        /* Responsive adjustments for larger screens */
+        @media (min-width: 640px) {
+            .hero-title {
+                font-size: 6vh;
+            }
+            .hero-subtitle {
+                font-size: 3vh;
+            }
+            .section-title {
+                font-size: 5vh;
+            }
+            .menu-item-title {
+                font-size: 3vh;
+            }
+            .menu-item-price {
+                font-size: 3vh;
+            }
+            .whatsapp-btn {
+                padding: 1vh 2vh;
+            }
+        }
+    </style>
+</head>
+<body class="bg-foodie-yellow text-stone-900">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-foodie-red shadow-lg transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-white transition transform duration-300 hover:scale-105">Foodie Bethak</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#deals" class="text-white hover:text-foodie-orange transition duration-300 ease-in-out">Deals</a>
+                <a href="#menu" class="text-white hover:text-foodie-orange transition duration-300 ease-in-out">Menu</a>
+                <a href="#experience" class="text-white hover:text-foodie-orange transition duration-300 ease-in-out">Our Experience</a>
+                <a href="#contact" class="text-white hover:text-foodie-orange transition duration-300 ease-in-out">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-foodie-red py-2 shadow-inner">
+            <a href="#deals" class="block px-4 py-2 text-white hover:bg-red-700">Deals</a>
+            <a href="#menu" class="block px-4 py-2 text-white hover:bg-red-700">Menu</a>
+            <a href="#experience" class="block px-4 py-2 text-white hover:bg-red-700">Our Experience</a>
+            <a href="#contact" class="block px-4 py-2 text-white hover:bg-red-700">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Header & Hero Section -->
+    <header id="hero" class="bg-foodie-red text-white py-12 md:py-24 text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center">
+                <img src="https://placehold.co/150x150/ff914d/ffffff?text=FB" alt="Foodie Bethak Logo" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4">
+                <h1 class="hero-title font-extrabold tracking-tight">Foodie Bethak</h1>
+                <p class="mt-4 hero-subtitle font-light">Your favorite spot for delicious food and great company.</p>
+                <a href="#menu" class="mt-8 btn bg-foodie-orange text-white">Explore Menu</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+
+        <!-- Our Experience Section -->
+        <section id="experience" class="py-12 md:py-16">
+            <h2 class="section-title font-bold text-center mb-8">Our Experience</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/800x600/f8f8f8/d1262d?text=Premium+Sitting+Area" alt="Premium Sitting Area" class="w-full h-auto object-cover">
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-semibold mb-4 text-foodie-red">Premium Sitting Area <img src="" alt=""></h3>
+                    <p class="text-lg text-stone-600">
+                        Relax and enjoy your meal in our comfortable and modern sitting area. Whether you're dining with family or friends, our space is designed for a memorable experience.
+                    </p>
+                </div>
+                <div class="order-first md:order-last rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/800x600/f8f8f8/d1262d?text=Our+Clean+Kitchen" alt="Clean Kitchen" class="w-full h-auto object-cover">
+                </div>
+                <div class="text-center md:text-right">
+                    <h3 class="text-2xl font-semibold mb-4 text-foodie-red">Our Clean Kitchen</h3>
+                    <p class="text-lg text-stone-600">
+                        We pride ourselves on maintaining the highest standards of hygiene. Our kitchen is always clean and well-maintained, ensuring your food is prepared in a safe environment.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Offers Section -->
+        <section id="deals" class="py-12 md:py-16">
+            <h2 class="section-title font-bold text-center mb-8">Deals & Offers</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Deal 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden menu-card">
+                    <img src="https://placehold.co/600x400/94A3B8/ffffff?text=Deal+1" alt="Deal 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 menu-item-title">Deal 1</h3>
+                        <p class="text-stone-600">2 Zinger Burgers + Fries + 2 Drinks</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="menu-item-price font-bold text-foodie-orange">Rs. 650</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Deal 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden menu-card">
+                    <img src="https://placehold.co/600x400/94A3B8/ffffff?text=Deal+2" alt="Deal 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 menu-item-title">Deal 2</h3>
+                        <p class="text-stone-600">3 Zinger Burgers + Fries + Family Drink</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="menu-item-price font-bold text-foodie-orange">Rs. 1020</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Deal 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden menu-card">
+                    <img src="https://placehold.co/600x400/94A3B8/ffffff?text=Deal+3" alt="Deal 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 menu-item-title">Deal 3</h3>
+                        <p class="text-stone-600">4 Zinger Burgers + Family Pizza + 4 Cold Drinks</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="menu-item-price font-bold text-foodie-orange">Rs. 2200</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-12 md:py-16">
+            <h2 class="section-title font-bold text-center mb-8">Our Full Menu</h2>
+            
+            <!-- Pizza Section -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 menu-card">
+                <h3 class="text-2xl font-bold mb-4 text-foodie-orange">Pizzas</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Pizza Flavors</h4>
+                        <ul class="space-y-2 text-lg">
+                            <li>Chicken Tikka - <span class="text-foodie-orange">Rs. 750 / 1200 / 1800 / 2500</span></li>
+                            <li>Chicken Fajita - <span class="text-foodie-orange">Rs. 750 / 1200 / 1800 / 2500</span></li>
+                            <li>Chicken Mexican - <span class="text-foodie-orange">Rs. 750 / 1200 / 1800 / 2500</span></li>
+                            <li>Chicken Bihari - <span class="text-foodie-orange">Rs. 750 / 1200 / 1800 / 2500</span></li>
+                            <li>Cheesy Pizza - <span class="text-foodie-orange">Rs. 750 / 1300 / 1800 / 2400</span></li>
+                            <li>Veggie Pizza - <span class="text-foodie-orange">Rs. 630 / 1000 / 1400 / 2000</span></li>
+                            <li>Lava Pizza - <span class="text-foodie-orange">Rs. 1800 / 2800</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Burger & Rolls Section -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 menu-card">
+                <h3 class="text-2xl font-bold mb-4 text-foodie-orange">Burgers & Rolls</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Burgers</h4>
+                        <ul class="space-y-2 text-lg">
+                            <li>Zinger Burger - <span class="text-foodie-orange">Rs. 500 / 700</span></li>
+                            <li>Crispy Burger - <span class="text-foodie-orange">Rs. 500 / 700</span></li>
+                            <li>BBQ Burger - <span class="text-foodie-orange">Rs. 400 / 600</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Rolls</h4>
+                        <ul class="space-y-2 text-lg">
+                            <li>Crispy Roll - <span class="text-foodie-orange">Rs. 360</span></li>
+                            <li>Chicken Tikka Roll - <span class="text-foodie-orange">Rs. 360</span></li>
+                            <li>Malai Tikka Roll - <span class="text-foodie-orange">Rs. 360</span></li>
+                            <li>Chicken Cheese Roll - <span class="text-foodie-orange">Rs. 360</span></li>
+                            <li>Kabab Roll - <span class="text-foodie-orange">Rs. 360</span></li>
+                            <li>Spicy Jalapeno Roll - <span class="text-foodie-orange">Rs. 360</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fried & Sauces Section -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 menu-card">
+                <h3 class="text-2xl font-bold mb-4 text-foodie-orange">Fried & Sauces</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Fried Items</h4>
+                        <ul class="space-y-2 text-lg">
+                            <li>Hot Wings - <span class="text-foodie-orange">Rs. 360 (5 pcs), 680 (10 pcs), 1000 (15 pcs)</span></li>
+                            <li>Nuggets - <span class="text-foodie-orange">Rs. 360 (5 pcs), 680 (10 pcs), 1000 (15 pcs)</span></li>
+                            <li>Cheese Ball - <span class="text-foodie-orange">Rs. 400 (5 pcs), 780 (10 pcs), 1150 (15 pcs)</span></li>
+                            <li>BBQ Wings - <span class="text-foodie-orange">Rs. 720 (5 pcs), 1100 (9 pcs)</span></li>
+                            <li>Honey Wings - <span class="text-foodie-orange">Rs. 720 (5 pcs), 1100 (9 pcs)</span></li>
+                            <li>Hot Shots - <span class="text-foodie-orange">Rs. 450 (5 pcs), 620 (9 pcs)</span></li>
+                            <li>Chicken Pieces - <span class="text-foodie-orange">Rs. 250 (2 pcs), 1150 (9 pcs)</span></li>
+                            <li>Fish Pieces - <span class="text-foodie-orange">Rs. 250 (2 pcs), 1150 (9 pcs)</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Sauces</h4>
+                        <ul class="space-y-2 text-lg">
+                            <li>All Sauces - <span class="text-foodie-orange">Rs. 80 / each</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Items Section -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 menu-card">
+                <h3 class="text-2xl font-bold mb-4 text-foodie-orange">Other Favorites</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Appetizers & Pasta</h4>
+                        <ul class="space-y-2 text-lg">
+                            <li>Russian Salad - <span class="text-foodie-orange">Rs. 600 (small), 1000 (large)</span></li>
+                            <li>Chicken Chowmein - <span class="text-foodie-orange">Rs. 750</span></li>
+                            <li>Chicken Pasta - <span class="text-foodie-orange">Rs. 750</span></li>
+                            <li>Chicken Lasagna - <span class="text-foodie-orange">Rs. 750</span></li>
+                            <li>Alfredo Pasta - <span class="text-foodie-orange">Rs. 750</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Drinks</h4>
+                        <ul class="space-y-2 text-lg">
+                            <li>Cold Drinks - <span class="text-foodie-orange">Rs. 100</span></li>
+                            <li>Family Pack Cold Drinks - <span class="text-foodie-orange">Rs. 300</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 md:py-16">
+            <h2 class="section-title font-bold text-center mb-8">Contact Us</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-lg mx-auto text-center">
+                <p class="text-lg mb-4">Have a question or want to place an order? Contact us on WhatsApp!</p>
+                <a href="https://api.whatsapp.com/send?phone=%2B923156521833&context=Afe23ksylOYdub82vBOC0dYPHsH0cgpTtjWRQd-JJy-KaDriFfIeYJ4d_cAoPg09lzYVuzcGFusdv2nfyxcowAoHNNPz-5Mhue92EzwSXFtrMGKzqPqM2aab8WIpZoPpd3-wX0ktBdPBvU4VE6ZG6bjcGA&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawMqCwFleHRuA2FlbQIxMABicmlkETE5UG9tSUNHQ1lOb0tRNjlWAR621tNox_i8w_2YUfnRc95hdPeZWxTdQWmpZYJvy9jwIKgCEcB2-HB1A4aXlA_aem_zTXlTrKjFY2eVmuGanAyZw" target="_blank" class="btn bg-foodie-red text-white whatsapp-btn">Chat on WhatsApp</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Foodie Bethak. All rights reserved.</p>
+            <p class="mt-2 text-sm text-stone-500">Note: Prices and deals are subject to change. Please contact the restaurant for the latest information.</p>
+        </div>
+    </footer>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - (document.querySelector('nav').offsetHeight),
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
